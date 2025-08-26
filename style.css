@@ -27,6 +27,7 @@
             margin: 0;
             padding: 0 8px;
         }
+        body {
             align-items: stretch;
             background-color: #fafbfc;
             color: #222;
@@ -92,7 +93,6 @@
         nav {
             background: #e9e9e9;
             padding: 12px 0;
-        }
         nav ul {
             display: flex;
             flex-wrap: wrap;
@@ -101,52 +101,19 @@
             list-style: none;
             margin: 0;
             padding: 0;
+        }
         /* Add icons before each Skills list item */
         .skills-list li::before {
             content: "🛠️ ";
             margin-right: 6px;
             font-size: 1.1em;
             vertical-align: middle;
-            @media (max-width: 768px) {
-                main {
-                    flex-direction: column;
-                    display: none; /* Hide nav by default on mobile */
-                    gap: 12px;
-                    padding: 12px;
-                }
-                header section:nth-of-type(3) {
-                    max-width: 95%;
-                    padding: 20px 10px 14px 10px;
-                }
-                nav ul {
-                    gap: 10px;
-                    -webkit-gap: 10px;
-                    -moz-gap: 10px;
-                }
-                .skills-list li::before {
-                    font-size: 0.98em;
-                    margin-right: 3px;
-                }
-            }
-            /* Make images and videos responsive */
-            img, video {
-                max-width: 100%;
-                height: auto;
-            }
-
-            /* Responsive: Adjust Skills icon size and spacing on smaller screens */
-            @media (max-width: 900px) {
-                .skills-list li::before {
-                    font-size: 1em;
-                    margin-right: 4px;
-                }
-            }
-            @media (max-width: 600px) {
-                .skills-list li::before {
-                    font-size: 0.95em;
-                    margin-right: 2px;
-                }
-            }
+        }
+        /* Make images and videos responsive */
+        img, video {
+            max-width: 100%;
+            height: auto;
+        }
         }
         nav li {
             margin: 0;
@@ -198,5 +165,50 @@
             }
             nav ul {
                 gap: 8px;
+            }
+        }        @media (max-width: 900px) {
+            main {
+                flex-direction: column;
+                gap: 16px;
+                padding: 16px;
+            }
+            .skills-list li::before {
+                font-size: 1em;
+                margin-right: 4px;
+            }
+        }
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+                gap: 12px;
+                padding: 12px;
+            }
+            header section:nth-of-type(3) {
+                max-width: 95%;
+                padding: 20px 10px 14px 10px;
+            }
+            nav ul {
+                gap: 10px;
+                -webkit-gap: 10px;
+                -moz-gap: 10px;
+            }
+            .skills-list li::before {
+                font-size: 0.98em;
+                margin-right: 3px;
+            }
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            main {
+                padding: 8px;
+            }
+            nav ul {
+                gap: 8px;
+            }
+            .skills-list li::before {
+                font-size: 0.95em;
+                margin-right: 2px;
             }
         }
